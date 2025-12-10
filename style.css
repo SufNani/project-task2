@@ -1,146 +1,90 @@
-.menu {
-    background-color: rgb(39, 66, 155);
-    color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 50px;
-    width: 100%;
-    text-align: center;
-    z-index: 10;
+/* Общие стили */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #eee;
+    display: grid;
+    grid-template-rows: auto auto auto auto auto auto;
 }
 
-.nav-item {
-    color:white;
+/* БЛОК 1 — шапка */
+.header {
+    background-color: #1a1a1a;
+    padding: 20px;
+
+    display: grid;
+    justify-items: center;
+    gap: 15px;
+}
+
+.nav {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 20px;
+}
+
+.nav a {
+    background-color: #333;
+    padding: 8px 16px;
     text-decoration: none;
-    display: inline-block;
-    padding: 4px 6px;
-    margin-top: 10px;
-    transition: 1s;
-    border-radius: 5px;
+    color: #fff;
+    border-radius: 8px;
 }
 
-.nav-item:hover {
-    color:rgb(24, 41, 99);
-    background-color: rgb(176, 184, 255);
-    transition: 1s;
+/* БЛОК 2 — баннер */
+.hero {
+    padding: 60px 20px;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Sochi_Cityscape.jpg/1280px-Sochi_Cityscape.jpg");
+    background-size: cover;
+    background-position: center;
+
+    display: grid;
+    justify-items: center;
+    gap: 10px;
+    text-shadow: 0 0 8px #000;
 }
 
-.hero{
-    margin-top: 65px;
-    position: relative;
-    height: 500px;
-    width: 100%;
+/* Общий стиль для блоков с местами */
+.place {
+    padding: 40px 20px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Две колонки: фото и текст */
+    gap: 20px;
+    align-items: center;
 }
 
-.hero img {
-    position:absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    filter: brightness(0.5);
-    border-radius: 15px;
-    border: 2px solid rgb(24, 41, 99);
-    object-fit: cover;  /* сохранение пропорций изображения */
-    z-index: 1;  /* работа со слоями */
-}
-
-.hero-content {
-    position: absolute;
-    top:30%;
-    left: 35%;
-    z-index: 2;  /* работа со слоями */
-    color: white;
-    text-align: center;
-
-}
-
-.text {
-    width: 400px;
-}
-
-.btn {
-    background-color: white;
-    color: black;
-    font-size : 16px;
-    height: 40px;
-    width: 400px;
+/* Фото для карточек */
+.place-image {
+    background-size: cover;
+    background-position: center;
     border-radius: 10px;
-    margin-top: 15px;
-    transition: 1s;
+    height: 260px;
 }
 
-
-.btn:hover {
-    background-color: rgb(176, 184, 255);
-    color: rgb(24, 41, 99);
-    font-size : 18px;
-    height: 45px;
-    width: 420px;
-    transition: 1s;
+/* ТЕКСТ внутри карточек */
+.place-text {
+    display: grid;
+    gap: 10px;
 }
 
-.sticky-block{
-    position: relative;
-    background-color: rgb(176, 184, 255);
-    border: 2px solid rgb(24, 41, 99);
-    border-radius: 15px;
-    height: 650px;
-    width: 100%;
-    margin-top: 15px;
+/* Уникальные фото для каждого места */
+.place1 .place-image {
+    background-image: url("https://sochi.hotelmarme.ru/wp-content/uploads/2020/09/marmelad1.jpg");
 }
 
-.sticky-sphera {
-    width: 100px;
-    height: 100px;
-    background-color: rgb(24, 41, 99);
-    border-radius: 50%;
-    margin-left: 48%;
-    position: sticky;
-    top: 50px;
+.place2 .place-image {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Rosa_Plateau_-_panoramio.jpg/1280px-Rosa_Plateau_-_panoramio.jpg");
 }
 
-.block{
-    position: relative;
-    background-color: rgb(73, 75, 95);
-    border: 2px solid rgb(24, 41, 99);
-    border-radius: 15px;
-    height: 1000px;
-    width: 100%;
-    margin-top: 15px;
+.place3 .place-image {
+    background-image: url("https://nature.sochi.ru/wp-content/uploads/2020/05/ornithological-park.jpg");
 }
 
+/* БЛОК 5 — подвал */
 .footer {
-    margin-top: 15px;
-    width: 100%;
-    height: 50px;
-    background-color: rgb(24, 41, 99);
-    color:white;
+    padding: 20px;
     text-align: center;
-    padding-top: 10px;
+    background-color: #000;
 }
-
-.btn-circle {
-    background-color: rgb(176, 184, 255);
-    border: 2px solid rgb(24, 41, 99);
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    position: fixed;
-    bottom: 30px;
-    right: 20px;
-    transition: 1s;
-}
-
-
-.btn-circle:hover {
-    background-color: rgb(24, 41, 99);;
-    border: 2px solid rgb(176, 184, 255);
-    width: 75px;
-    height: 75px;
-    transition: 1s;
-}
-
-
-
